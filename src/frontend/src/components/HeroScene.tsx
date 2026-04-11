@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import pnaLogo from "../../public/assets/pnalogo.png";
 import NeuralNetworkScene from "./NeuralNetworkScene";
 import ParticleField from "./ParticleField";
 
@@ -261,7 +262,7 @@ export default function HeroScene() {
             >
               {/* Logo */}
               <img
-                src="/assets/pnalogo.png"
+                src={pnaLogo}
                 alt="PNACADEMY logo"
                 style={{
                   height: "40px",

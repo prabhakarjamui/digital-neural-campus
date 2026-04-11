@@ -1,5 +1,6 @@
 import { Separator } from "@/components/ui/separator";
 import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
+import pnaLogo from "../../public/assets/pnalogo.png";
 
 const footerLinks = {
   platform: [
@@ -39,7 +40,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-2.5 mb-4">
               <img
-                src="/assets/pnalogo.png"
+                src={pnaLogo}
                 alt="PNACADEMY Logo"
                 className="h-8 w-auto object-contain"
                 style={{

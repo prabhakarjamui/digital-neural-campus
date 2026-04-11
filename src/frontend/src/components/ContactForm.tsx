@@ -80,14 +80,17 @@ export default function ContactForm() {
     if (Object.keys(errs).length > 0) return;
 
     mutate(form, {
-      onSuccess: () => {
-        setShowSuccess(true);
-        setTimeout(() => {
-          setShowSuccess(false);
-          setForm(defaultForm);
-          setTouched({});
-          setErrors({});
-        }, 3000);
+      onSuccess: (result) => {
+        // result is null when mailto fallback was used (static hosting)
+        if (result !== null) {
+          setShowSuccess(true);
+          setTimeout(() => {
+            setShowSuccess(false);
+            setForm(defaultForm);
+            setTouched({});
+            setErrors({});
+          }, 3000);
+        }
       },
     });
   };

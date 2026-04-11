@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
+import pnaLogo from "../../public/assets/pnalogo.png";
 
 const navLinks = [
   { label: "COSE Framework", href: "#cose" },
@@ -49,7 +50,7 @@ export default function Navigation() {
         >
           <div className="relative h-8 flex items-center justify-center">
             <img
-              src="/assets/pnalogo.png"
+              src={pnaLogo}
               alt="PNACADEMY Logo"
               className="h-8 w-auto object-contain"
               style={{

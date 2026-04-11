@@ -8,6 +8,7 @@ import {
   Zap,
 } from "lucide-react";
 import { motion } from "motion/react";
+import ceoPrabhakar from "../../public/assets/ceo-prabhakar.jpg";
 
 // Styled 44×44 icon container
 function IconBox({
@@ -129,7 +130,7 @@ export default function FounderSection() {
               {/* Image */}
               <div className="relative h-72 overflow-hidden">
                 <img
-                  src="/assets/ceo-prabhakar.jpg"
+                  src={ceoPrabhakar}
                   alt="Prabhakar Kumar — CEO, PNACADEMY EDTECH"
                   className="w-full h-full object-cover object-top"
                 />

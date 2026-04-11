@@ -13,12 +13,21 @@ process.env.STORAGE_GATEWAY_URL =
   process.env.STORAGE_GATEWAY_URL || "https://blob.caffeine.ai";
 
 export default defineConfig({
-  base: '/', // Add this line at the top of your config object
   logLevel: "error",
+  base: "./",
   build: {
+    outDir: "dist",
     emptyOutDir: true,
+    assetsDir: "assets",
     sourcemap: false,
     minify: false,
+    rollupOptions: {
+      output: {
+        entryFileNames: "assets/[name].js",
+        chunkFileNames: "assets/[name].js",
+        assetFileNames: "assets/[name][extname]",
+      },
+    },
   },
   css: {
     postcss: "./postcss.config.js",
