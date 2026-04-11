@@ -1,0 +1,21 @@
+// Version: 1.0.0
+type Inquiry__159127206 =
+  {
+    email : Text;
+    id : Nat;
+    institution : Text;
+    message : Text;
+    name : Text;
+    phone : Text;
+    timestamp : Int
+  };
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+actor {
+  stable inquiries :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Inquiry__159127206]];
+      var elementIndex : Nat__490723111
+    }
+};

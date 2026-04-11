@@ -1,0 +1,27 @@
+type SubmitResult = 
+ variant {
+   err: text;
+   ok: nat;
+ };
+type SubmitInquiryPayload = 
+ record {
+   email: text;
+   institution: text;
+   message: text;
+   name: text;
+   phone: text;
+ };
+type Inquiry = 
+ record {
+   email: text;
+   id: nat;
+   institution: text;
+   message: text;
+   name: text;
+   phone: text;
+   timestamp: int;
+ };
+service : {
+  listInquiries: () -> (vec Inquiry) query;
+  submitInquiry: (payload: SubmitInquiryPayload) -> (SubmitResult);
+}
